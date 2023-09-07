@@ -37,6 +37,12 @@ function fetchData(inValue) {
             details.innerHTML = meanings[0].partOfSpeech
             wordMeaning.innerHTML = definitions[0].definition
 
+            if (definitions[0].example == undefined) {
+                wordExample.innerHTML = "There is no Example for this word in our Dictionary."
+            } else {
+                wordExample.innerHTML = definitions[0].example
+            }
+
         })
 }
 
