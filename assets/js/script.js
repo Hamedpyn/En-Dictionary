@@ -26,6 +26,13 @@ const dictionary = () => {
     }
 };
 
+function fetchData(inValue) {
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inValue}`).then(res => res.json())
+        .then(result => {
+            let { word, phonetic, meanings } = result[0]
+            let { definitions } = result[0].meanings[0]
+        })
+}
 
 voice.addEventListener('click', () => {
     let speechVoice = new SpeechSynthesisUtterance(enWord.innerHTML)
