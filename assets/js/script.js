@@ -3,9 +3,6 @@
 const searchBtn = document.querySelector("#search-btn");
 const inpWord = document.querySelector("#inp-word");
 const voice = document.querySelector(".word button");
-const word = document.querySelector(".word h3");
-const details = document.querySelector(".details").firstChild;
-const pronunciation = document.querySelector(".details").lastChild;
 const enWord = document.querySelector(".word h3");
 const details = document.querySelector(".details").children[0];
 const pronouns = document.querySelector(".details").children[1];
