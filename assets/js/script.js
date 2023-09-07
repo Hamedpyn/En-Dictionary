@@ -27,6 +27,8 @@ const dictionary = () => {
 };
 
 function fetchData(inValue) {
+    wait.style.display = "block"
+    wait.innerHTML = "Waiting..."
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${inValue}`).then(res => res.json())
         .then(result => {
             let { word, phonetic, meanings } = result[0]
@@ -43,6 +45,8 @@ function fetchData(inValue) {
                 wordExample.innerHTML = definitions[0].example
             }
 
+            resultSec.style.display = "block";
+            wait.style.display = "none"
         })
 }
 
