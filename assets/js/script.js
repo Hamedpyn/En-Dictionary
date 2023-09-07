@@ -27,4 +27,9 @@ const dictionary = () => {
 };
 
 
+voice.addEventListener('click', () => {
+    let speechVoice = new SpeechSynthesisUtterance(enWord.innerHTML)
+    speechSynthesis.speak(speechVoice)
+});
+
 searchBtn.addEventListener('click', dictionary);
