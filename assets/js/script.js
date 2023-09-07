@@ -11,3 +11,20 @@ const wordExample = document.querySelector(".word-example");
 const resultSec = document.querySelector("#result");
 const wait = document.querySelector("#wait");
 
+
+const dictionary = () => {
+    let inValue = inpWord.value;
+    if (inValue) {
+        resultSec.style.display = "none"
+
+        fetchData(inValue);
+    
+        inpWord.value = "";
+    }else {
+        wait.style.display = "block"
+        wait.innerHTML = "Please Enter a Word..."
+    }
+};
+
+
+searchBtn.addEventListener('click', dictionary);
