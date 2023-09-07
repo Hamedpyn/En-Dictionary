@@ -31,6 +31,12 @@ function fetchData(inValue) {
         .then(result => {
             let { word, phonetic, meanings } = result[0]
             let { definitions } = result[0].meanings[0]
+
+            enWord.innerHTML = word
+            pronouns.innerHTML = phonetic
+            details.innerHTML = meanings[0].partOfSpeech
+            wordMeaning.innerHTML = definitions[0].definition
+
         })
 }
 
