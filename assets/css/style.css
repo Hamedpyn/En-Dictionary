@@ -39,6 +39,10 @@ body {
     font-size: 16px;
 }
 
+.search-box input:focus {
+    border-bottom: 3px solid #8e75ff;
+}
+
 .search-box button {
     padding: 15px 0;
     width: 25%;
@@ -58,6 +62,7 @@ body {
 
 .result {
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .result h3 {
@@ -102,4 +107,14 @@ body {
 .error {
     margin-top: 80px;
     text-align: center;
+}
+
+#wait {
+    margin-top: 50px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.word button:hover {
+    color: #8e75ff;
 }

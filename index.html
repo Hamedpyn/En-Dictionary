@@ -17,13 +17,12 @@
     <title>En Dictionary</title>
   </head>
   <body>
-    <audio id="sound"></audio>
     <div class="container">
       <div class="search-box">
         <input type="text" placeholder="Type the word here.." id="inp-word" />
         <button id="search-btn">Search</button>
       </div>
-      <div class="result" id="result">
+      <div style="display: none;" class="result" id="result">
 
         <!-- Start Explain Template -->
         <div class="word">
@@ -45,6 +44,7 @@
         <!-- Finish Explain Template -->
 
       </div>
+      <h3 style="display: none;" id="wait">Waiting...</h3>
     </div>
     <!-- Script -->
     <script src="assets/js/script.js"></script>
