@@ -39,6 +39,7 @@ const dictionary = () => {
 
 // Function to fetch data from the dictionary API
 function fetchData(inValue) {
+    document.querySelector(".error").style.display = "none";
     wait.style.display = "block";
     wait.innerHTML = "Waiting...";
 
@@ -66,7 +67,10 @@ function fetchData(inValue) {
             // Show the result section and hide the loading message
             resultSec.style.display = "block";
             wait.style.display = "none";
-        });
+        }).catch(() => {
+            wait.style.display = "none";
+            document.querySelector(".error").style.display = "block";
+        })
 }
 
 // Add a click event listener to the "voice button ( SPEAKER )"
